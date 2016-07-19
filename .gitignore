@@ -13,3 +13,4 @@
 /target/
 /target/
 /bin/
+src/main/resources/twitter4j.properties
