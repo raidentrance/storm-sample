@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.walmart.bolt;
+package com.raidentrance.bolt;
 
 import java.util.Map;
 

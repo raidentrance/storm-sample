@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.walmart.spout;
+package com.raidentrance.spout;
 
 import java.util.Map;
 import java.util.concurrent.LinkedBlockingQueue;

@@ -1,14 +1,14 @@
 /**
  * 
  */
-package com.walmart.topologies;
+package com.raidentrance.topologies;
 
 import org.apache.storm.Config;
 import org.apache.storm.LocalCluster;
 import org.apache.storm.topology.TopologyBuilder;
 
-import com.walmart.bolt.TwitterPrinterBolt;
-import com.walmart.spout.TweetStreamSpout;
+import com.raidentrance.bolt.TwitterPrinterBolt;
+import com.raidentrance.spout.TweetStreamSpout;
 
 /**
  * @author alex @raidentrance
