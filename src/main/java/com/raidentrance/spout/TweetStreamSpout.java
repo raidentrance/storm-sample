@@ -14,6 +14,8 @@ import org.apache.storm.tuple.Fields;
 import org.apache.storm.tuple.Values;
 import org.apache.storm.utils.Utils;
 
+import com.raidentrance.util.Languages;
+
 import twitter4j.FilterQuery;
 import twitter4j.StallWarning;
 import twitter4j.Status;
@@ -50,7 +52,6 @@ public class TweetStreamSpout extends BaseRichSpout {
 		this.twitterStream = new TwitterStreamFactory().getInstance();
 		this.queue = new LinkedBlockingQueue<>();
 		StatusListener listener = new StatusListener() {
-
 			@Override
 			public void onStatus(Status status) {
 				queue.offer(status);
@@ -78,7 +79,11 @@ public class TweetStreamSpout extends BaseRichSpout {
 		};
 		twitterStream.addListener(listener);
 		FilterQuery filterQuery = new FilterQuery();
-		filterQuery.track("walmart", "superama", "sams","aurrera");
+
+		for (Languages language : Languages.values()) {
+			filterQuery.track(language.getName());
+		}
+
 		twitterStream.filter(filterQuery);
 	}
 
